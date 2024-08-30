@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require("express");
 const path = require("node:path");
 const app = express();
-const port = 3000;
+const port = 8000;
 const pool = require("./db/pool.js");
 const db = require("./db/queries.js");
 app.set("views", path.join(__dirname, "views"));
