@@ -8,5 +8,6 @@ module.exports = new Pool({
   database: process.env.DATABASE,
   ssl: {
     require: true,
+    rejectUnauthorized: false
   }
 });
