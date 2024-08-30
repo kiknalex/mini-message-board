@@ -10,11 +10,7 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 
-const testtest = async () => {
-  
 
-}
-testtest();
 const messages = [
   {
     text: "Hi there!",
@@ -32,6 +28,7 @@ app.get("/", async (req, res) => {
   // const {rows} = await pool.query("SELECT * FROM messages");
   // res.render("index", { title: "Mini Messageboard", messages: rows });
   console.log("testtest");
+  res.status(200).send("Response is ok, server is working.");
 });
 
 app.get("/new", (req, res) => {
