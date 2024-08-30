@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require("express");
 const path = require("node:path");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 3000;
 const pool = require("./db/pool.js");
 const db = require("./db/queries.js");
 app.set("views", path.join(__dirname, "views"));
@@ -29,8 +29,9 @@ const messages = [
 ];
 
 app.get("/", async (req, res) => {
-  const {rows} = await pool.query("SELECT * FROM messages");
-  res.render("index", { title: "Mini Messageboard", messages: rows });
+  // const {rows} = await pool.query("SELECT * FROM messages");
+  // res.render("index", { title: "Mini Messageboard", messages: rows });
+  console.log("testtest");
 });
 
 app.get("/new", (req, res) => {
