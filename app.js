@@ -25,8 +25,9 @@ const messages = [
 ];
 
 app.get("/", async (req, res) => {
-  // const {rows} = await pool.query("SELECT * FROM messages");
-  // res.render("index", { title: "Mini Messageboard", messages: rows });
+  const {rows} = await pool.query("SELECT * FROM messages");
+  console.log(rows);
+  res.render("index", { title: "Mini Messageboard", messages: rows });
   console.log("testtest");
   res.send("Response is ok, server is working.");
 });
