@@ -29,7 +29,6 @@ app.get("/", async (req, res) => {
   console.log(rows);
   res.render("index", { title: "Mini Messageboard", messages: rows });
   console.log("testtest");
-  res.send("Response is ok, server is working.");
 });
 
 app.get("/new", (req, res) => {
